@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="@string/kv"
+        android:id="@+id/nav_kv"
+        android:icon="@drawable/baseline_local_dining_white_18dp"/>
+    <item android:title="@string/mc"
+        android:id="@+id/nav_mc"
+        android:icon="@drawable/baseline_restaurant_white_18dp"/>
+    <item android:title="@string/ms"
+        android:id="@+id/nav_ms"
+        android:icon="@drawable/baseline_local_pizza_white_18dp"/>
+    <item android:title="@string/mtm"
+        android:id="@+id/nav_mtm"
+        android:icon="@drawable/baseline_fastfood_white_18dp"/>
+    <item android:title="@string/nu"
+        android:id="@+id/nav_nu"
+        android:icon="@drawable/baseline_local_bar_white_18dp"/>
+
+
+</menu>

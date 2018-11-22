@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "412520999223",
+    "firebase_url": "https://duan1-5bbc3.firebaseio.com",
+    "project_id": "duan1-5bbc3",
+    "storage_bucket": "duan1-5bbc3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:412520999223:android:ea6caba9204ac555",
+        "android_client_info": {
+          "package_name": "com.phamngoclinh.loginfbfirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "412520999223-6nadmp6a169m984eloab41e2ho34ccgv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.phamngoclinh.loginfbfirebase",
+            "certificate_hash": "937b9827c9a916d17396da8d1f9ab088820d1fcb"
+          }
+        },
+        {
+          "client_id": "412520999223-csh9ftdduk7u9nkfqifvsjn3cb1ujl4i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4NHTf7oOd_Mwcvbuwljt7LYnA9AY6GwI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "412520999223-csh9ftdduk7u9nkfqifvsjn3cb1ujl4i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

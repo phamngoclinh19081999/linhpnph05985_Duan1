@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar"/>
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        app:menu="@menu/menu_home"
+        app:itemTextColor="@color/coloritem"
+        app:itemIconTint="@color/coloritem">
+    </android.support.design.widget.BottomNavigationView>
+
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <FrameLayout
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </FrameLayout>
+
+        <android.support.design.widget.NavigationView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:itemTextColor="@color/colorPrimary"
+            app:itemIconTint="@color/colorPrimary"
+            android:id="@+id/navigation"
+            android:layout_gravity="start"
+            android:fitsSystemWindows="true"
+            app:menu="@menu/menu"
+            app:headerLayout="@layout/header">
+
+        </android.support.design.widget.NavigationView>
+
+
+
+    </android.support.v4.widget.DrawerLayout>
+
+</LinearLayout>
