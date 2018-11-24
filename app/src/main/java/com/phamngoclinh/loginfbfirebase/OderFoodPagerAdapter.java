@@ -42,7 +42,7 @@ public class OderFoodPagerAdapter extends FragmentPagerAdapter {
             case 1:
                 return "Maindishes";
             case 2:
-                return "Sup";
+                return "Vegetables";
             case 3:
                 return "Desserts";
             case 4:
