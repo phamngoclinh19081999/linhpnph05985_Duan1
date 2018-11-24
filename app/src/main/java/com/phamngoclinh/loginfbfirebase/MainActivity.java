@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -45,6 +46,8 @@ import com.squareup.picasso.PicassoProvider;
 import java.util.ArrayList;
 import java.util.List;
 
+import pl.droidsonroids.gif.GifImageView;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -57,6 +60,8 @@ public class MainActivity extends AppCompatActivity {
     private Button btnDangki;
     private Button btnDangnhap;
     private EditText edtName,edtPass;
+    private GifImageView loading;
+    private ConstraintLayout layout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,6 +77,8 @@ public class MainActivity extends AppCompatActivity {
         btnDangnhap = findViewById(R.id.btnDangnhap);
         edtName = findViewById(R.id.edtUsername);
         edtPass = findViewById(R.id.editPassword);
+        loading = findViewById(R.id.loading);
+        layout = findViewById(R.id.layout);
         mAuth = FirebaseAuth.getInstance();
 
         btnDangnhap.setOnClickListener(new View.OnClickListener() {
@@ -84,6 +91,8 @@ public class MainActivity extends AppCompatActivity {
                 }else if (password.equals("")){
                     edtPass.setError("Vui lòng nhập password !!!");
                 } else {
+                    loading.setVisibility(View.VISIBLE);
+                    layout.setAlpha(0.3f);
                     DangNhap();
 
                 }
@@ -111,6 +120,8 @@ public class MainActivity extends AppCompatActivity {
                             startActivity(intent);
                             Toast.makeText(MainActivity.this, "Đăng nhập thành công !!!", Toast.LENGTH_SHORT).show();
                         } else {
+                            loading.setVisibility(View.GONE);
+                            layout.setAlpha(1f);
                             Toast.makeText(MainActivity.this, "Thông tin tài khoản hoặc mật khẩu không chính xác !!!", Toast.LENGTH_SHORT).show();
                         }
                     }

@@ -50,12 +50,12 @@ public class Menufragment extends Fragment {
     void addA(){
         arrayList = new ArrayList<>();
         arrayList.clear();
-        arrayList.add(new Menu("1","Súp hải sản đậu phụ","Appetizer","58000",R.drawable.a1));
-        arrayList.add(new Menu("2","Súp gà hầm","Appetizer","58000",R.drawable.a2));
-        arrayList.add(new Menu("3","Súp cua, gà sợi ngô non","Appetizer","65000",R.drawable.a3));
-        arrayList.add(new Menu("4","Súp nấm tôm tươi","Appetizer","58000",R.drawable.a4));
-        arrayList.add(new Menu("5","Gỏi sứa tôm thịt","Appetizer","138000",R.drawable.a5));
-        arrayList.add(new Menu("6","Salad củ đậu, dưa leo trộn dừa tươi","Appetizer","78000",R.drawable.a6));
+        arrayList.add(new Menu("1","SÚP HẢI SẢN ĐẬU PHỤ","Appetizer","58000",R.drawable.a1));
+        arrayList.add(new Menu("2","SÚP GÀ NẤM","Appetizer","58000",R.drawable.a2));
+        arrayList.add(new Menu("3","SÚP CUA, GÀ SỢI NGÔ NON","Appetizer","65000",R.drawable.a3));
+        arrayList.add(new Menu("4","SÚP NẤM TÔM TƯƠI","Appetizer","58000",R.drawable.a4));
+        arrayList.add(new Menu("5","GỎI SỨA TÔM THỊT","Appetizer","138000",R.drawable.a5));
+        arrayList.add(new Menu("6","SALAD CỦ ĐẬU, DƯA LEO TRỘN DỪA TƯƠI","Appetizer","78000",R.drawable.a6));
         node_sachAdapter =new MenuAdapter(getActivity(),arrayList);
         Appetizer.setLayoutManager(linearLayoutManager);
         Appetizer.setHasFixedSize(true);
@@ -101,12 +101,12 @@ public class Menufragment extends Fragment {
     void addD(){
         arrayList = new ArrayList<>();
         arrayList.clear();
-        arrayList.add(new Menu("1","Gỏi cóc non tai heo","Soup - Hot pot","438000",R.drawable.s1));
-        arrayList.add(new Menu("2","Gỏi ngheu bắp chuối","Soup - Hot pot","428000",R.drawable.s2));
-        arrayList.add(new Menu("3","Salat sốt chanh leo","Soup - Hot pot","268000",R.drawable.s3));
-        arrayList.add(new Menu("4","Gỏi cóc non tai heo","Soup - Hot pot","458000",R.drawable.s4));
-        arrayList.add(new Menu("5","Gỏi cóc non tai heo","Soup - Hot pot","758000",R.drawable.s5));
-        arrayList.add(new Menu("6","Gỏi cóc non tai heo","Soup - Hot pot","758000",R.drawable.s6));
+        arrayList.add(new Menu("1","LẨU THÁI HẢI SẢN","Soup - Hot pot","438000",R.drawable.s1));
+        arrayList.add(new Menu("2","LẨU RIÊU CUA SƯỜN SỤN BẮP BÒ","Soup - Hot pot","428000",R.drawable.s2));
+        arrayList.add(new Menu("3","LẨU ẾCH MĂNG CAY","Soup - Hot pot","268000",R.drawable.s3));
+        arrayList.add(new Menu("4","LẨU NẤM BỐN MÙA VỚI THỊT BÒ","Soup - Hot pot","458000",R.drawable.s4));
+        arrayList.add(new Menu("5","LẨU CUA GIA VIÊN SÒ ĐIỆP","Soup - Hot pot","758000",R.drawable.s5));
+        arrayList.add(new Menu("6","LẨU CUA GIA VIÊN CHUA CAY","Soup - Hot pot","758000",R.drawable.s6));
         node_sachAdapter =new MenuAdapter(getActivity(),arrayList);
         Desserts.setLayoutManager(abcde);
         Desserts.setHasFixedSize(true);

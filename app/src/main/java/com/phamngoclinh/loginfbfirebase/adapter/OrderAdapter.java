@@ -63,8 +63,7 @@ public class OrderAdapter extends RecyclerView.Adapter<MenuHolder> {
                 imageView.setImageResource(table.getAnh());
                 textView.setText(table.getTenmon());
                 soluong = editText.getText().toString().trim();
-                Runnabelq runnabelq = new Runnabelq(context,1);
-                new Thread(runnabelq).start();
+                textView1.setText(table.getGiatien()+" VND");
 
 
 
@@ -95,45 +94,5 @@ public class OrderAdapter extends RecyclerView.Adapter<MenuHolder> {
         return arrayList.size();
     }
 
-    class Runnabelq implements Runnable{
-        Context context;
-        int second;
-
-        public Runnabelq(Context context, int second) {
-            this.context = context;
-            this.second = second;
-        }
-
-        @Override
-        public void run() {
-
-            for (int i = 0;i<=1;i++){
-                final Handler handler = new Handler(Looper.getMainLooper());
-                final int a = i;
-                handler.post(new Runnable() {
-                    @RequiresApi(api = Build.VERSION_CODES.M)
-                    @Override
-                    public void run() {
-                        if (a==1){
-                            Toast.makeText(context, ""+soluong, Toast.LENGTH_SHORT).show();
-                            if (!soluong.equals("")){
-
-                                textView1.setText(Integer.parseInt(soluong)*Integer.parseInt(table.getGiatien()));
-                            }
-                            Runnabelq runnabelq = new Runnabelq(context,1);
-                            new Thread(runnabelq).start();
-                        }
-
-                    }
-                });
-                try {
-                    Thread.sleep(500);
-                }catch (Exception e){
-
-                }
-            }
-
-        }
-    }
 }
 

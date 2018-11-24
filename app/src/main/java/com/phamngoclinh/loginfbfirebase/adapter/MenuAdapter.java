@@ -35,8 +35,8 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuHolder> {
 
         Menu table = arrayList.get(position);
         holder.imgAnhmn.setImageResource(table.getAnh());
-        holder.tvTen.setText("Tên món : "+table.getTenmon());
-        holder.tvGiaban.setText("Giá tiền : "+table.getGiatien());
+        holder.tvTen.setText(table.getTenmon());
+        holder.tvGiaban.setText(table.getGiatien()+" VND");
 
     }
 
