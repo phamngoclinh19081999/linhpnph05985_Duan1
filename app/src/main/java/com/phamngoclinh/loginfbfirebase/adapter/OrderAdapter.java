@@ -16,6 +16,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.phamngoclinh.loginfbfirebase.R;
 import com.phamngoclinh.loginfbfirebase.model.Menu;
 import com.phamngoclinh.loginfbfirebase.viewholder.MenuHolder;
@@ -25,11 +27,7 @@ import java.util.ArrayList;
 public class OrderAdapter extends RecyclerView.Adapter<MenuHolder> {
     private Context context;
     private ArrayList<Menu> arrayList;
-    private ImageView imageView;
-    private EditText editText;
-    private TextView textView,textView1;
-     Menu table;
-    String soluong;
+    Menu table;
     public OrderAdapter(Context context, ArrayList<Menu> arrayList) {
         this.context = context;
         this.arrayList = arrayList;
@@ -44,46 +42,33 @@ public class OrderAdapter extends RecyclerView.Adapter<MenuHolder> {
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MenuHolder holder, int position) {
+    public void onBindViewHolder(@NonNull final MenuHolder holder, int position) {
         table= arrayList.get(position);
         holder.imgAnhmn.setImageResource(table.getAnh());
         holder.tvTen.setText(table.getTenmon());
         holder.tvGiaban.setText(table.getGiatien()+" VND");
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
+        holder.tvSoluong.setText("0");
+        holder.imgPlus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                final Dialog dialog = new Dialog(context);
-                dialog.setContentView(R.layout.dialog_order);
-                imageView = dialog.findViewById(R.id.imgAnhmonan);
-                textView = dialog.findViewById(R.id.tvTenmonan);
-                textView1 = dialog.findViewById(R.id.tvGiamonan);
-                editText = dialog.findViewById(R.id.edtSoluong);
-
-                imageView.setImageResource(table.getAnh());
-                textView.setText(table.getTenmon());
-                soluong = editText.getText().toString().trim();
-                textView1.setText(table.getGiatien()+" VND");
-
-
-
-                dialog.findViewById(R.id.btnOrder).setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-
-                    }
-                });
-
-                dialog.findViewById(R.id.btnHuy).setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        dialog.dismiss();
-                    }
-                });
-
-                dialog.show();
-
-
+                if (holder.checkBox.isChecked()) {
+                    int soluong = Integer.parseInt(holder.tvSoluong.getText().toString()) + 1;
+                    holder.tvSoluong.setText("" + soluong);
+                }
+                else {
+                    Toast.makeText(context, "Bạn chưa chọn món ăn này !!!", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+        holder.imgMinus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int soluong = Integer.parseInt(holder.tvSoluong.getText().toString())-1;
+                if (soluong<0){
+                    Toast.makeText(context, "Số lượng món ăn là 0 !!!", Toast.LENGTH_SHORT).show();
+                }else {
+                    holder.tvSoluong.setText(""+soluong);
+                }
             }
         });
 

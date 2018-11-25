@@ -10,10 +10,11 @@ import android.view.ViewGroup;
 import com.phamngoclinh.loginfbfirebase.R;
 import com.phamngoclinh.loginfbfirebase.model.Menu;
 import com.phamngoclinh.loginfbfirebase.viewholder.MenuHolder;
+import com.phamngoclinh.loginfbfirebase.viewholder.ThucdonHolder;
 
 import java.util.ArrayList;
 
-public class MenuAdapter extends RecyclerView.Adapter<MenuHolder> {
+public class MenuAdapter extends RecyclerView.Adapter<ThucdonHolder> {
     private Context context;
     private ArrayList<Menu> arrayList;
 
@@ -24,14 +25,14 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuHolder> {
 
     @NonNull
     @Override
-    public MenuHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ThucdonHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater=LayoutInflater.from(parent.getContext());
-        View view=inflater.inflate(R.layout.cardview_menu,parent,false);
-        return new MenuHolder(view);
+        View view=inflater.inflate(R.layout.cardview_thucdon,parent,false);
+        return new ThucdonHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MenuHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ThucdonHolder holder, int position) {
 
         Menu table = arrayList.get(position);
         holder.imgAnhmn.setImageResource(table.getAnh());

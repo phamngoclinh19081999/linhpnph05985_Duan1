@@ -10,14 +10,13 @@ public class Menu {
     public Menu() {
     }
 
-    public Menu(String id, String tenmon, String theloai, String giatien, int anh) {
+    public Menu(String id, String tenmon, String theloai, String giatien, int an) {
         this.id = id;
         this.tenmon = tenmon;
         this.theloai = theloai;
         this.giatien = giatien;
         this.anh = anh;
     }
-
     public String getTenmon() {
         return tenmon;
     }

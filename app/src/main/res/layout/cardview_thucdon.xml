@@ -13,7 +13,7 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:id="@+id/imgAnhmn"
+            android:id="@+id/imgAnhmns"
             android:layout_width="80dp"
             android:layout_height="100dp"
             android:src="@mipmap/ic_launcher"
@@ -27,44 +27,18 @@
             android:gravity="center">
 
             <TextView
-                android:id="@+id/tvTenmon"
+                android:id="@+id/tvTenmons"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Tên món"
                 android:textColor="@color/colorPrimary"
                 android:textStyle="bold"/>
             <TextView
-                android:id="@+id/tvGia"
+                android:id="@+id/tvGias"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Giá bán"/>
 
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_gravity="center"
-            android:gravity="center">
-            <CheckBox
-                android:id="@+id/cboOrder"
-                android:layout_marginBottom="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-            <ImageView
-                android:id="@+id/imgPlus"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/icon_plus"/>
-            <TextView
-                android:id="@+id/tvSoluong"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-            <ImageView
-                android:id="@+id/imgMinus"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/icon_minus"/>
         </LinearLayout>
     </LinearLayout>
 

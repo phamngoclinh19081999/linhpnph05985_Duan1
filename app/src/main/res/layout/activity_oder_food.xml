@@ -19,16 +19,34 @@
         android:layout_height="match_parent"
         android:layout_below="@+id/tabLayout"
         android:layout_above="@+id/btnOK"/>
-    <Button
+    <LinearLayout
         android:id="@+id/btnOK"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btnHuymon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/stylebutton"
+            android:text="Cancel"
+            android:textColor="#ffffff"
+            android:textAllCaps="false"
+            android:layout_marginBottom="5dp"/>
+    <Button
+        android:id="@+id/btnDatmon"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
         android:background="@drawable/stylebutton"
-        android:text="Order"
+        android:text="Confirm"
         android:textColor="#ffffff"
         android:textAllCaps="false"
         android:layout_marginBottom="5dp"/>
+
+    </LinearLayout>
 
 
 
