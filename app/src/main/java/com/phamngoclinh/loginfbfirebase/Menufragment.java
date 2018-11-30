@@ -88,7 +88,7 @@ public class Menufragment extends Fragment {
         arrayList.clear();
         arrayList.add(new Menu("1","RAU CỦ BỐN MÙA HẤP LỒNG CHẤM KHO QUẸT","Vegetables","78000",R.drawable.v1));
         arrayList.add(new Menu("2","NGỒNG TỎI XÀO","Vegetables","68000",R.drawable.v2));
-        arrayList.add(new Menu("3","NGỒNG TỎI XÀOTHỊT BÒ","Vegetables","128000",R.drawable.v3));
+        arrayList.add(new Menu("3","NGỒNG TỎI XÀO THỊT BÒ","Vegetables","128000",R.drawable.v3));
         arrayList.add(new Menu("4","NGỒNG TỎI XÀO NGAO","Vegetables","118000",R.drawable.v4));
         arrayList.add(new Menu("5","NGỒNG TỎI XÀO TÔM LỘT","Vegetables","115000",R.drawable.v5));
         arrayList.add(new Menu("6","BÔNG CẢI XANH THỊT BÒ XÀO NẤM","Vegetables","138000",R.drawable.v6));

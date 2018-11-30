@@ -6,46 +6,51 @@
     android:layout_height="match_parent"
     tools:context=".OderFoodActivity"
     android:orientation="vertical">
-
-    <android.support.design.widget.TabLayout
-        android:id="@+id/tabLayout"
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorAccent"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:background="@color/colorPrimary"/>
-
-    <android.support.v4.view.ViewPager
-        android:id="@+id/viewPager"
+        android:layout_height="40dp"
+        android:text="Appetizer"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textSize="18sp"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerA"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/tabLayout"
-        android:layout_above="@+id/btnOK"/>
+        android:layout_below="@+id/tvTitle"
+        android:layout_above="@+id/A">
+    </android.support.v7.widget.RecyclerView>
     <LinearLayout
-        android:id="@+id/btnOK"
+        android:id="@+id/A"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
         <Button
-            android:id="@+id/btnHuymon"
+            android:id="@+id/btnBack"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@drawable/stylebutton"
             android:text="Cancel"
-            android:textColor="#ffffff"
             android:textAllCaps="false"
-            android:layout_marginBottom="5dp"/>
-    <Button
-        android:id="@+id/btnDatmon"
-        android:layout_width="0dp"
-        android:layout_weight="1"
-        android:layout_height="wrap_content"
-        android:background="@drawable/stylebutton"
-        android:text="Confirm"
-        android:textColor="#ffffff"
-        android:textAllCaps="false"
-        android:layout_marginBottom="5dp"/>
-
+            android:textColor="#ffffff"
+            android:background="@drawable/stylebutton"
+            android:onClick="huyA"/>
+        <Button
+            android:id="@+id/btnConfirm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Next"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:background="@drawable/stylebutton"
+            android:onClick="clA"/>
     </LinearLayout>
 
 

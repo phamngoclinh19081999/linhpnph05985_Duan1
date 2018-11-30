@@ -16,20 +16,20 @@
             android:value="@string/facebook_app_id" />
 
         <activity android:name=".MainActivity" />
-        <activity android:name=".SplashScreenActivity">
-
-        </activity>
+        <activity android:name=".SplashScreenActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".HomeActivity">
-
-        </activity>
-        <activity android:name=".OderFoodActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".OderFoodActivity" />
+        <activity android:name=".MaindishesActivity" />
+        <activity android:name=".VegetablesActivity" />
+        <activity android:name=".HotpotActivity" />
+        <activity android:name=".DrinksActivity"></activity>
     </application>
 
 </manifest>

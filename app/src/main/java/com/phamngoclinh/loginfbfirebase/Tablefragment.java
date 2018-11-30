@@ -11,6 +11,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.firebase.database.ChildEventListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.phamngoclinh.loginfbfirebase.adapter.TableAdapter;
@@ -25,6 +28,7 @@ public class Tablefragment extends Fragment {
     private TableAdapter node_sachAdapter;
     private ArrayList<Table> arrayList;
     private DatabaseReference mData;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -50,10 +54,13 @@ public class Tablefragment extends Fragment {
         recyclerviewT.setLayoutManager(linearLayoutManager);
         recyclerviewT.setHasFixedSize(true);
         recyclerviewT.setAdapter(node_sachAdapter);
-        mData.child("Table").setValue(arrayList);
+        mData.child("Order").setValue(null);
+//        mData.child("Table").setValue(arrayList);
     }
-    public void activity(){
+    public void activity(int position){
+
         Intent intent = new Intent(getActivity(),OderFoodActivity.class);
+        intent.putExtra("soban", ""+(position+1));
         startActivity(intent);
     }
 }

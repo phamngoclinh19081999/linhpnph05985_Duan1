@@ -10,7 +10,7 @@ public class Menu {
     public Menu() {
     }
 
-    public Menu(String id, String tenmon, String theloai, String giatien, int an) {
+    public Menu(String id, String tenmon, String theloai, String giatien, int anh) {
         this.id = id;
         this.tenmon = tenmon;
         this.theloai = theloai;

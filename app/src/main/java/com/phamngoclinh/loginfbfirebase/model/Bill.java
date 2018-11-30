@@ -1,47 +1,20 @@
 package com.phamngoclinh.loginfbfirebase.model;
 
 public class Bill {
-    private String table;
-    private String floor;
-    private String namefood;
-    private String tongtien;
+    private String mon1;
 
-    public Bill(String table, String floor, String namefood, String tongtien) {
-        this.table = table;
-        this.floor = floor;
-        this.namefood = namefood;
-        this.tongtien = tongtien;
+    public Bill() {
     }
 
-    public String getTable() {
-        return table;
+    public Bill( String mon1) {
+        this.mon1 = mon1;
     }
 
-    public void setTable(String table) {
-        this.table = table;
+    public String getMon1() {
+        return mon1;
     }
 
-    public String getFloor() {
-        return floor;
-    }
-
-    public void setFloor(String floor) {
-        this.floor = floor;
-    }
-
-    public String getNamefood() {
-        return namefood;
-    }
-
-    public void setNamefood(String namefood) {
-        this.namefood = namefood;
-    }
-
-    public String getTongtien() {
-        return tongtien;
-    }
-
-    public void setTongtien(String tongtien) {
-        this.tongtien = tongtien;
+    public void setMon1(String mon1) {
+        this.mon1 = mon1;
     }
 }
